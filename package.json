@@ -6,8 +6,7 @@
   "scripts": {
     "test": "npx jest -i",
     "build": "npx tsc --outDir dist",
-    "start": "node dist/src/server.js",
-    "postinstall": "npm run build",
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node dist/src/server.js",
     "dev": "npx nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node src/server.ts\""
   },
   "keywords": [],
